@@ -1,0 +1,47 @@
+/* ==========================================================================
+	Opinion Slider
+	========================================================================== */
+
+@use '../base' as *;
+
+/*========================================================================== */
+
+.c-opinionSliderSec {
+    position: relative;
+
+    &_swiper {
+        overflow: visible;
+    }
+    .swiper-button {
+        top: 110px;
+        right: 48px;
+        @include respond-below(lg) {
+            top: 60px;
+        }
+        &.-prev {
+            top: 278px;
+            left: 48px;
+            @include respond-below(lg) {
+                top: 208px;
+            }
+        }
+    }
+    .swiper-pagination-wrapper {
+        position: absolute;
+        right: 98px;
+        bottom: 32px;
+        @include respond-below(md) {
+            right: initial;
+            bottom: -16px;
+        }
+    }
+    .swiper-pagination {
+        background-color: $color_black;
+        @include respond-below(md) {
+            background-color: $color_grey-2;
+        }
+    }
+    .swiper-pagination-num {
+        color: $color_black;
+    }
+}

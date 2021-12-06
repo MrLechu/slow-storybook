@@ -1,0 +1,59 @@
+/* ==========================================================================
+	MealBox
+	========================================================================== */
+
+@use '../base' as *;
+
+/*========================================================================== */
+
+.c-mealBox {
+    position: relative;
+    max-width: 393px;
+
+    &_box {
+        position: relative;
+        padding: 40px;
+        overflow: hidden;
+        background-color: $color_pearl_bush;
+
+        @include respond-below(md) {
+            max-width: none;
+            padding: 32px 24px;
+        }
+    }
+    &_properties {
+        display: flex;
+        border-bottom: 1px solid rgba($color_cinder, 0.03);
+
+        li {
+            flex-shrink: 0;
+            margin-right: 24px;
+
+            &:last-child {
+                margin-right: 0;
+                margin-left: auto;
+                text-align: right;
+            }
+        }
+    }
+    &_stamp {
+        position: absolute;
+        right: -45px;
+        bottom: -45px;
+    }
+    &_number {
+        @include typo_aeonik_200-220;
+        position: absolute;
+        right: 11px;
+        bottom: -78px;
+        font-weight: 700;
+        color: $color_parchment;
+        letter-spacing: -0.01em;
+        opacity: 0.4;
+    }
+
+    .t-text {
+        position: relative;
+        z-index: 1;
+    }
+}

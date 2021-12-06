@@ -1,0 +1,58 @@
+/* ==========================================================================
+	OpinionBox
+	========================================================================== */
+
+@use '../base' as *;
+
+/*========================================================================== */
+
+.c-opinionBox {
+    position: relative;
+    overflow: hidden;
+    max-width: 396px;
+    @include respond-below(md) {
+        max-width: 100%;
+    }
+
+    &_box {
+        position: relative;
+        width: 393px;
+        height: 316px;
+        padding: 76px 40px;
+        overflow: hidden;
+        background-color: $color_white;
+
+        @include respond-below(md) {
+            width: 100%;
+            height: 146px;
+            padding: 32px 16px;
+        }
+    }
+
+    &_quote {
+        max-width: 273px;
+        @include respond-below(md) {
+            max-width: 296px;
+        }
+    }
+    &_author {
+        @include respond-below(md) {
+            letter-spacing: -0.01em;
+        }
+    }
+    &_decor {
+        position: absolute;
+        right: 0;
+        bottom: -156px;
+        font-size: 480px;
+        font-weight: 700;
+        line-height: 220px;
+        color: #f4f4f4;
+        letter-spacing: -0.01em;
+        opacity: 0.4;
+        @include respond-below(md) {
+            bottom: initial;
+            top: 48px;
+        }
+    }
+}

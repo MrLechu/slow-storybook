@@ -1,0 +1,87 @@
+/* ==========================================================================
+	Slider
+	========================================================================== */
+
+@use '../base' as *;
+@use '../plugins/swiper.scss' as *;
+
+/*========================================================================== */
+
+.c-slider {
+    &:hover {
+        .swiper-button {
+            opacity: 1;
+        }
+    }
+
+    .swiper-pagination-wrapper {
+        z-index: 1;
+    }
+
+    .swiper-button {
+        z-index: 1;
+        opacity: 0;
+    }
+}
+
+/*========================================================================== */
+
+.c-mealSlide {
+    position: relative;
+    max-width: calc(100vw - 100px);
+
+    @include respond-below(md) {
+        max-width: 327px;
+    }
+    @include respond-below(xxs) {
+        max-width: calc(100vw - 48px);
+    }
+
+    &_img {
+        width: 100%;
+        max-height: inherit;
+        object-fit: cover;
+        object-position: center;
+
+        @include respond-below(md) {
+            height: 396px;
+        }
+    }
+
+    .c-mealBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include respond-below(md) {
+            position: relative;
+        }
+    }
+}
+
+/*========================================================================== */
+
+.c-opinionSlide {
+    position: relative;
+
+    &_img {
+        width: 100%;
+        max-height: inherit;
+        object-fit: cover;
+        object-position: center;
+
+        @include respond-below(md) {
+            height: 396px;
+        }
+    }
+
+    .c-opinionBox {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include respond-below(md) {
+            position: relative;
+        }
+    }
+}

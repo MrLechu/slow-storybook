@@ -1,0 +1,59 @@
+/* ==========================================================================
+	Properties table
+	========================================================================== */
+
+@use '../base' as *;
+
+/*========================================================================== */
+
+.c-propTable {
+    &_title {
+        border-bottom: 1px solid $color_grey-2;
+    }
+
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            @include typo_aeonik_12-14;
+            position: relative;
+            padding-right: 20px;
+            margin-right: 16px;
+            margin-bottom: 16px;
+
+            &:not(:last-child) {
+                &::before {
+                    position: absolute;
+                    top: calc(50% - 2px);
+                    right: 0;
+                    width: 4px;
+                    height: 4px;
+                    content: '';
+                    background-color: $color_limestone_grey;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+/*========================================================================== */
+
+.c-simplePropTable {
+    display: flex;
+
+    li {
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+
+        @include respond-below(md) {
+            @include typo_aeonik_14-20;
+        }
+
+        strong {
+            margin-bottom: 8px;
+        }
+    }
+}

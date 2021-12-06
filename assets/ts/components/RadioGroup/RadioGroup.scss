@@ -1,0 +1,44 @@
+/* ==========================================================================
+	RadioGroup
+	========================================================================== */
+
+@use '../../../css/base' as *;
+
+/*========================================================================== */
+
+.c-radioGroup {
+    max-width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    margin-left: -8px;
+    margin-right: -8px;
+
+    @include respond-below(sm) {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &.-vertical {
+        flex-direction: column;
+        width: fit-content;
+
+        @include respond-below(md) {
+            width: 100%;
+        }
+
+        .f-label {
+            &_text {
+                flex-grow: 1;
+            }
+        }
+    }
+    .f-label {
+        @include respond-above(sm) {
+            margin: 0 8px 16px;
+        }
+        @include respond-below(sm) {
+            width: 100%;
+        }
+    }
+}

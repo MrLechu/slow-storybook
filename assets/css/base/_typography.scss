@@ -1,0 +1,464 @@
+/* ==========================================================================
+Typography 
+========================================================================== */
+
+@use 'sass:math';
+@use 'vars' as *;
+@use 'mixins' as *;
+
+body {
+    font-family: $font_family-aeonik;
+    font-size: 16px;
+    font-weight: normal;
+    color: $color_cinder;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*========================================================================== */
+
+@mixin typo_aeonik_256-220 {
+    font-family: $font_family-aeonik;
+    font-size: 256px;
+    line-height: math.div(220, 256);
+}
+
+@mixin typo_aeonik_200-220 {
+    font-family: $font_family-aeonik;
+    font-size: 200px;
+    line-height: math.div(220, 200);
+}
+
+@mixin typo_aeonik_88-72 {
+    font-family: $font_family-aeonik;
+    font-size: 88px;
+    line-height: math.div(72, 88);
+}
+
+@mixin typo_aeonik_56-72 {
+    font-family: $font_family-aeonik;
+    font-size: 56px;
+    line-height: math.div(72, 56);
+}
+
+@mixin typo_aeonik_48-64 {
+    font-family: $font_family-aeonik;
+    font-size: 48px;
+    line-height: math.div(64, 48);
+}
+
+@mixin typo_aeonik_40-56 {
+    font-family: $font_family-aeonik;
+    font-size: 40px;
+    line-height: math.div(56, 40);
+}
+
+@mixin typo_aeonik_32-64 {
+    font-family: $font_family-aeonik;
+    font-size: 32px;
+    line-height: math.div(64, 32);
+}
+
+@mixin typo_aeonik_32-40 {
+    font-family: $font_family-aeonik;
+    font-size: 32px;
+    line-height: math.div(40, 32);
+}
+
+@mixin typo_aeonik_40-56 {
+    font-family: $font_family-aeonik;
+    font-size: 40px;
+    line-height: math.div(56, 40);
+}
+
+@mixin typo_aeonik_32-38 {
+    font-family: $font_family-aeonik;
+    font-size: 32px;
+    line-height: math.div(38, 32);
+}
+
+@mixin typo_aeonik_32-36 {
+    font-family: $font_family-aeonik;
+    font-size: 32px;
+    line-height: math.div(36, 32);
+}
+
+@mixin typo_aeonik_28-40 {
+    font-family: $font_family-aeonik;
+    font-size: 28px;
+    line-height: math.div(40, 28);
+}
+
+@mixin typo_aeonik_24-36 {
+    font-family: $font_family-aeonik;
+    font-size: 24px;
+    line-height: math.div(36, 24);
+}
+
+@mixin typo_aeonik_24-28 {
+    font-family: $font_family-aeonik;
+    font-size: 24px;
+    line-height: math.div(28, 24);
+}
+
+@mixin typo_aeonik_20-23 {
+    font-family: $font_family-aeonik;
+    font-size: 20px;
+    line-height: math.div(23, 20);
+}
+
+@mixin typo_aeonik_20-22 {
+    font-family: $font_family-aeonik;
+    font-size: 20px;
+    line-height: math.div(22, 20);
+}
+
+@mixin typo_aeonik_18-34 {
+    font-family: $font_family-aeonik;
+    font-size: 18px;
+    line-height: math.div(34, 18);
+}
+
+@mixin typo_aeonik_18-24 {
+    font-family: $font_family-aeonik;
+    font-size: 18px;
+    line-height: math.div(24, 18);
+}
+
+@mixin typo_aeonik_18-22 {
+    font-family: $font_family-aeonik;
+    font-size: 18px;
+    line-height: math.div(22, 18);
+}
+
+@mixin typo_aeonik_16-28 {
+    font-family: $font_family-aeonik;
+    font-size: 16px;
+    line-height: math.div(28, 16);
+}
+
+@mixin typo_aeonik_16-24 {
+    font-family: $font_family-aeonik;
+    font-size: 16px;
+    line-height: math.div(25, 16);
+}
+
+@mixin typo_aeonik_16-18 {
+    font-family: $font_family-aeonik;
+    font-size: 16px;
+    line-height: math.div(18, 16);
+}
+
+@mixin typo_aeonik_14-24 {
+    font-family: $font_family-aeonik;
+    font-size: 14px;
+    line-height: math.div(24, 14);
+}
+
+@mixin typo_aeonik_14-20 {
+    font-family: $font_family-aeonik;
+    font-size: 14px;
+    line-height: math.div(20, 14);
+}
+
+@mixin typo_aeonik_14-16 {
+    font-family: $font_family-aeonik;
+    font-size: 14px;
+    line-height: math.div(16, 14);
+}
+
+@mixin typo_aeonik_14-24 {
+    font-family: $font_family-aeonik;
+    font-size: 14px;
+    line-height: math.div(24, 14);
+}
+
+@mixin typo_aeonik_12-24 {
+    font-family: $font_family-aeonik;
+    font-size: 12px;
+    line-height: math.div(24, 12);
+}
+
+@mixin typo_aeonik_12-20 {
+    font-family: $font_family-aeonik;
+    font-size: 12px;
+    line-height: math.div(20, 12);
+}
+
+@mixin typo_aeonik_12-14 {
+    font-family: $font_family-aeonik;
+    font-size: 12px;
+    line-height: math.div(14, 12);
+}
+
+@mixin typo_aeonik_11-12 {
+    font-family: $font_family-aeonik;
+    font-size: 11px;
+    line-height: math.div(12, 11);
+}
+
+/*========================================================================== */
+
+// Desktop fonts
+.t-title {
+    @include typo_aeonik_32-38;
+    font-family: $font_family-aeonik;
+    font-weight: bold;
+
+    @include respond-below(md) {
+        &.-f32md {
+            @include typo_aeonik_32-40;
+        }
+    }
+
+    @include respond-below(sm) {
+        @include typo_aeonik_24-28;
+
+        &.-f24sm {
+            @include typo_aeonik_24-28;
+        }
+    }
+
+    &.-f56 {
+        @include typo_aeonik_56-72;
+    }
+
+    &.-f48 {
+        @include typo_aeonik_48-64;
+    }
+
+    &.-f40 {
+        @include typo_aeonik_40-56;
+    }
+
+    &.-f32_64 {
+        @include typo_aeonik_32-64;
+    }
+
+    &.-f32 {
+        @include typo_aeonik_32-38;
+    }
+
+    &.-f32_36 {
+        @include typo_aeonik_32-36;
+    }
+
+    &.-f24_36 {
+        @include typo_aeonik_24-36;
+    }
+
+    &.-f24 {
+        @include typo_aeonik_24-28;
+    }
+
+    &.-f20 {
+        @include typo_aeonik_20-22;
+    }
+
+    &.-f18 {
+        @include typo_aeonik_18-22;
+    }
+
+    &.-f16 {
+        @include typo_aeonik_16-18;
+    }
+
+    &.-f14 {
+        @include typo_aeonik_14-16;
+    }
+
+    br {
+        @include respond-below(sm) {
+            display: none;
+        }
+    }
+}
+
+.t-title {
+    @include respond-below(md) {
+        @include typo_aeonik_24-28;
+        &.-f32md {
+            @include typo_aeonik_32-38;
+        }
+        &.-f28md {
+            @include typo_aeonik_28-40;
+        }
+        &.-f24md {
+            @include typo_aeonik_24-28;
+        }
+        &.-f18md {
+            @include typo_aeonik_18-22;
+        }
+        &.-f16md {
+            @include typo_aeonik_16-18;
+        }
+        &.-f14md {
+            @include typo_aeonik_14-24;
+        }
+        &.-f12md {
+            @include typo_aeonik_12-14;
+        }
+    }
+}
+
+/*========================================================================== */
+
+// Desktop fonts
+.t-text {
+    @include typo_aeonik_14-16;
+    color: rgba($color_cinder, 0.9);
+
+    &.-f40 {
+        @include typo_aeonik_40-56;
+    }
+    &.-f24 {
+        @include typo_aeonik_24-28;
+    }
+
+    &.-f20_23 {
+        @include typo_aeonik_20-23;
+    }
+
+    &.-f18_34 {
+        @include typo_aeonik_18-34;
+    }
+
+    &.-f18 {
+        @include typo_aeonik_18-22;
+    }
+
+    &.-f16_28 {
+        @include typo_aeonik_16-28;
+    }
+
+    &.-f16 {
+        @include typo_aeonik_16-18;
+    }
+
+    &.-f14_20 {
+        @include typo_aeonik_14-20;
+    }
+
+    &.-f14_24 {
+        @include typo_aeonik_14-24;
+    }
+
+    &.-f14_20 {
+        @include typo_aeonik_14-20;
+    }
+
+    &.-f14 {
+        @include typo_aeonik_14-16;
+    }
+
+    &.-f12_20 {
+        @include typo_aeonik_12-20;
+    }
+
+    &.-f12 {
+        @include typo_aeonik_12-14;
+    }
+
+    &.-f12_20 {
+        @include typo_aeonik_12-20;
+    }
+}
+
+.t-text {
+    @include respond-below(md) {
+        @include typo_aeonik_14-20;
+
+        &.-f18md {
+            @include typo_aeonik_18-24;
+        }
+        &.-f16md {
+            @include typo_aeonik_16-28;
+        }
+        &.-f16_18md {
+            @include typo_aeonik_16-18;
+        }
+        &.-f14md {
+            @include typo_aeonik_14-20;
+        }
+    }
+}
+
+// Mobile fonts
+.t-text {
+    @include respond-below(md) {
+        @include typo_aeonik_14-20;
+
+        &.-f18md {
+            @include typo_aeonik_18-24;
+        }
+        &.-f14md {
+            @include typo_aeonik_14-20;
+        }
+
+        &.-f14_24md {
+            @include typo_aeonik_14-24;
+        }
+        &.-f18md {
+            @include typo_aeonik_18-22;
+        }
+        &.-f11md {
+            @include typo_aeonik_11-12;
+        }
+    }
+}
+
+/*========================================================================== */
+
+.t-text,
+ol {
+    a {
+        display: inline;
+        text-decoration: none;
+    }
+}
+
+.t-subtitle {
+    @include typo_aeonik_18-22;
+    color: $color_pumpkin;
+
+    @include respond-below(md) {
+        @include typo_aeonik_14-20;
+    }
+
+    &::before {
+        display: inline-block;
+        width: 24px;
+        margin-right: 24px;
+        vertical-align: middle;
+        content: ' ';
+        border-top: 1px solid $color_pumpkin;
+
+        @include respond-below(md) {
+            margin-right: 16px;
+        }
+    }
+
+    &.-white {
+        color: $color_white;
+
+        &::before {
+            border-top: 1px solid $color_white;
+        }
+    }
+}
+
+/*========================================================================== */
+
+.t-decors {
+    @include typo_aeonik_256-220;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    color: $color_grey;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+
+    @include respond-below(md) {
+        @include typo_aeonik_88-72;
+    }
+}

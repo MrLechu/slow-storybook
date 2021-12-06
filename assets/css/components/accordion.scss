@@ -1,0 +1,184 @@
+/* ==========================================================================
+	Accordion
+	========================================================================== */
+
+@use '../base' as *;
+
+/*========================================================================== */
+
+.c-accordion {
+    // used in: homepage
+    border-bottom: 1px solid rgba($color_cinder, 0.03);
+
+    &_item {
+        position: relative;
+        width: 100%;
+
+        border-bottom: 1px solid rgba($color_cinder, 0.03);
+
+        &::after {
+            @include icon;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            z-index: 1;
+            font-size: 24px;
+            content: '\e901';
+            transition: transform ease-in-out 300ms;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: -30px;
+            z-index: 1;
+            width: calc(100% + 60px);
+            height: calc(100% + 2px);
+            content: '';
+            background-color: $color_grey;
+            opacity: 0;
+            transition: opacity 200ms ease-in;
+        }
+
+        &:first-child {
+            border-top: 1px solid rgba($color_cinder, 0.03);
+        }
+
+        &.-active {
+            border-top: 0;
+
+            &::after {
+                transform: rotate(180deg);
+            }
+
+            &::before {
+                opacity: 1;
+            }
+
+            .c-accordion {
+                &_title {
+                    position: relative;
+                    z-index: 1;
+
+                    @include respond-below(md) {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        &.-hiddenMobile {
+            @include respond-below(md) {
+                display: none;
+            }
+        }
+    }
+
+    &_title {
+        padding-right: 44px;
+        cursor: pointer;
+    }
+
+    &_content {
+        position: relative;
+        z-index: 1;
+        height: 0;
+        min-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all ease-in-out 300ms;
+
+        &.-active {
+            opacity: 1;
+        }
+        &:not(.-active) {
+            margin-bottom: 0;
+        }
+
+        p + p {
+            margin-top: 24px;
+        }
+
+        a {
+            color: $color_pumpkin;
+            transition: color 100s ease-in;
+
+            &:hover {
+                color: $color_pumpkin-dark;
+            }
+        }
+    }
+
+    &.-alt {
+        // jused in: diet page
+        @include respond-below(md) {
+            background-color: #f4f4f4;
+            border-bottom-color: #f4f4f4;
+        }
+
+        .c-accordion {
+            &_item {
+                padding: 0 24px;
+                background-color: $color_white;
+                border: 0;
+
+                @include respond-below(md) {
+                    padding: 0 16px;
+                }
+
+                &::before {
+                    right: 0;
+                    left: 0;
+                    z-index: 0;
+                    width: 100%;
+                    height: calc(100% - 8px);
+                    background-color: $color_white;
+                    opacity: 1;
+                }
+
+                &::after {
+                    top: 35px;
+                    right: 24px;
+                    font-size: 40px;
+                    color: $color_pumpkin;
+                    content: '\e93a';
+                    transform: rotate(90deg);
+
+                    @include respond-below(md) {
+                        top: 21px;
+                        right: 16px;
+                        font-size: 24px;
+                        color: $color_cinder;
+                        content: '\e915';
+                        transform: rotate(0);
+                    }
+                }
+
+                &.-active {
+                    &::after {
+                        transform: rotate(-90deg);
+
+                        @include respond-below(md) {
+                            transform: rotate(180deg);
+                        }
+                    }
+                    .c-accordion_content {
+                        border-color: $color_grey-2;
+                    }
+                }
+            }
+
+            &_title {
+                position: relative;
+                z-index: 1;
+
+                @include respond-below(md) {
+                    font-weight: 400;
+                }
+            }
+
+            &_content {
+                border-top: 1px solid $color_white;
+            }
+        }
+    }
+}

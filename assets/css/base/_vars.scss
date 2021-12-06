@@ -1,0 +1,49 @@
+/* ==========================================================================
+	 Vars
+	 ========================================================================== */
+
+/* Colors */
+$color_white: #fff;
+$color_black: #000;
+$color_black2: #2E2A24;
+
+$color_cinder: #121212;
+$color_grey: #fbfbfb;
+$color_grey-2: #f4f4f4;
+$color_grey-3: #676f7e;
+$color_grey-4: #f0edea;
+$color_grey-5: #878787;
+$color_grey-6: #f8f8f8;
+$color_grey-7: #cdcdcd;
+$color_limestone_grey: #9ca3af;
+$color_light_beige: #c3c3c3;
+$color_pumpkin: #ff641e;
+$color_pumpkin-dark: #eb4900;
+$color_error_info: #e00000;
+$color_pearl_bush: #f5eee3;
+$color_parchment: #efe3d1;
+$color_bush: #00321e;
+$color_green: #1AB800;
+$color_success: #00ac67;
+$color_limestone_grey: #9ca3af;
+
+/* Fonts */
+$font_family-aeonik: 'Aeonik', sans-serif;
+
+/* Breakpoints */
+$breakpoints: (
+    xxxs: 320px,
+    xxs: 375px,
+    xs: 576px,
+    sm: 768px,
+    md: 992px,
+    lg: 1200px,
+    xl: 1440px,
+);
+
+/* Distances */
+$menu_height: 105px;
+$menu_height_mobile: 68px;
+
+/* Other */
+$image_path: '../../images';

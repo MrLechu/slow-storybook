@@ -1,0 +1,21 @@
+// ==========================================================================
+// Loader
+// ==========================================================================
+
+@use '../../../css/base' as *;
+
+// ==========================================================================
+
+.c-loader {
+    position: relative;
+    display: block;
+    text-align: center;
+    color: $color_pumpkin-dark;
+
+    [class^='icon-'] {
+        display: inline-block;
+        font-size: 24px;
+        transform-origin: center;
+        animation: loading 1.5s infinite linear;
+    }
+}

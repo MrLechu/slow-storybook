@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../../fonts/icomoon.eot?k1327x');
+    src: url('../../fonts/icomoon.eot?k1327x#iefix') format('embedded-opentype'),
+        url('../../fonts/icomoon.ttf?k1327x') format('truetype'),
+        url('../../fonts/icomoon.woff?k1327x') format('woff'),
+        url('../../fonts/icomoon.svg?k1327x#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@mixin icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-transform: none;
+    speak: never;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-archive::before {
+    content: '\e900';
+}
+.icon-arrow::before {
+    content: '\e901';
+}
+.icon-arrow-left::before {
+    content: '\e901';
+    display: inline-block;
+    transform: rotate(180deg);
+}
+.icon-avocado::before {
+    content: '\e903';
+}
+.icon-bag::before {
+    content: '\e904';
+}
+.icon-beef::before {
+    content: '\e905';
+}
+.icon-biceps::before {
+    content: '\e906';
+}
+.icon-book::before {
+    content: '\e907';
+}
+.icon-bottle::before {
+    content: '\e908';
+}
+.icon-bottle2::before {
+    content: '\e909';
+}
+.icon-broccoli::before {
+    content: '\e90a';
+}
+.icon-butter::before {
+    content: '\e90b';
+}
+.icon-candy::before {
+    content: '\e90c';
+}
+.icon-celery::before {
+    content: '\e90d';
+}
+.icon-check-mark::before {
+    content: '\e90e';
+}
+.icon-cutlery::before {
+    content: '\e910';
+}
+.icon-cutlery2::before {
+    content: '\e911';
+}
+.icon-dairy::before {
+    content: '\e912';
+}
+.icon-document::before {
+    content: '\e913';
+}
+.icon-dots::before {
+    content: '\e914';
+}
+.icon-dropdown::before {
+    content: '\e915';
+}
+.icon-egg::before {
+    content: '\e916';
+}
+.icon-egg2::before {
+    content: '\e917';
+}
+.icon-eggs::before {
+    content: '\e918';
+}
+.icon-exclamation::before {
+    content: '\e919';
+}
+.icon-eye::before {
+    content: '\e91a';
+}
+.icon-eye-crossed::before {
+    content: '\e91b';
+}
+.icon-fish::before {
+    content: '\e91c';
+}
+.icon-folder::before {
+    content: '\e91d';
+}
+.icon-glass::before {
+    content: '\e91e';
+}
+.icon-gluten::before {
+    content: '\e91f';
+}
+.icon-gluten-free::before {
+    content: '\e920';
+}
+.icon-honey::before {
+    content: '\e921';
+}
+.icon-honey2::before {
+    content: '\e922';
+}
+.icon-leaf::before {
+    content: '\e923';
+}
+.icon-loading::before {
+    content: '\e924';
+}
+.icon-lupine::before {
+    content: '\e925';
+}
+.icon-meat-free::before {
+    content: '\e926';
+}
+.icon-menu-hamburger::before {
+    content: '\e927';
+}
+.icon-minus::before {
+    content: '\e928';
+}
+.icon-mixer::before {
+    content: '\e929';
+}
+.icon-molluscs::before {
+    content: '\e92a';
+}
+.icon-muscle::before {
+    content: '\e92b';
+}
+.icon-mustard::before {
+    content: '\e92c';
+}
+.icon-no-meat::before {
+    content: '\e92d';
+}
+.icon-nut::before {
+    content: '\e92e';
+}
+.icon-nuts::before {
+    content: '\e92f';
+}
+.icon-onion::before {
+    content: '\e930';
+}
+.icon-pepper::before {
+    content: '\e931';
+}
+.icon-pie::before {
+    content: '\e932';
+}
+.icon-plus::before {
+    content: '\e933';
+}
+.icon-pork::before {
+    content: '\e935';
+}
+.icon-poultry::before {
+    content: '\e936';
+}
+.icon-sesame-seeds::before {
+    content: '\e937';
+}
+.icon-shellfish::before {
+    content: '\e938';
+}
+.icon-shevron::before {
+    content: '\e93a';
+}
+.icon-shrimps::before {
+    content: '\e93c';
+}
+.icon-sign-in::before {
+    content: '\e93d';
+}
+.icon-sign-out::before {
+    content: '\e93e';
+}
+.icon-SO2::before {
+    content: '\e93f';
+}
+.icon-soy::before {
+    content: '\e940';
+}
+.icon-thermos::before {
+    content: '\e941';
+}
+.icon-trash::before {
+    content: '\e942';
+}
+.icon-user::before {
+    content: '\e943';
+}
+.icon-vegetables::before {
+    content: '\e944';
+}
+.icon-x::before {
+    content: '\e945';
+}

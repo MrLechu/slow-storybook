@@ -1,0 +1,49 @@
+/* ==========================================================================
+	Quantity +/-
+	========================================================================== */
+
+@use '../../../css/base' as *;
+
+/*========================================================================== */
+
+.f-quantity {
+    display: flex;
+    width: 126px;
+    height: 48px;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 4px;
+    padding-left: 4px;
+    border: 1px solid $color_grey-4;
+    border-radius: 24px;
+    &_button {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        border-radius: 50px;
+        text-indent: -999em;
+        &.-minus {
+            background-color: $color_grey-2;
+            background-image: url('../../../images/icons/minus.svg');
+        }
+        &.-plus {
+            background-color: $color_pumpkin;
+            background-image: url('../../../images/icons/plus-white.svg');
+        }
+        &:disabled {
+            cursor: default;
+        }
+    }
+    &_value {
+        @include typo_aeonik_14-16;
+        width: 22px;
+        margin-right: 5px;
+        margin-left: 5px;
+        color: $color_cinder;
+        font-weight: 700;
+        text-align: center;
+    }
+}

@@ -1,0 +1,22 @@
+/* ==========================================================================
+	Tags
+	========================================================================== */
+
+@use '../base' as *;
+
+/*========================================================================== */
+
+.c-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    &_item {
+        @include typo_aeonik_12-14;
+        padding: 9px 16px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        background-color: $color_white;
+        border: 1px solid $color_grey-2;
+        border-radius: 56px;
+    }
+}

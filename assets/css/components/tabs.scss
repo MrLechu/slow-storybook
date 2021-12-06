@@ -1,0 +1,98 @@
+/* ==========================================================================
+	Tabs
+	========================================================================== */
+
+@use '../base' as *;
+
+/*========================================================================== */
+
+.c-tabs {
+    &_nav {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba($color_cinder, 0.03);
+    }
+
+    &_item {
+        padding: 0 8px 27px;
+        margin: 0 8px;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+        transition: color 100ms ease-in, border-color 100ms ease-in;
+
+        &:hover {
+            color: $color_pumpkin;
+        }
+
+        &.-active {
+            color: $color_pumpkin;
+            border-color: $color_pumpkin;
+        }
+    }
+
+    &_content {
+        @include respond-above(md) {
+            display: none;
+
+            &.-active {
+                display: block;
+            }
+        }
+
+        @include respond-below(md) {
+            height: 0;
+            min-height: 0;
+            overflow: hidden;
+            background-color: $color_grey;
+            opacity: 0;
+            transition: all ease-in-out 300ms;
+
+            &.-active {
+                opacity: 1;
+            }
+            &:not(.-active) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &_title {
+        &.js-collapse {
+            @include respond-below(md) {
+                position: relative;
+                width: 100%;
+            }
+
+            &::before {
+                @include respond-below(md) {
+                    position: absolute;
+                    top: -20px;
+                    left: calc(50% - 50vw);
+                    width: 100vw;
+                    height: 1px;
+                    content: '';
+                    background-color: rgba($color_cinder, 0.03);
+                }
+            }
+
+            &::after {
+                @include respond-below(md) {
+                    @include icon;
+                    position: absolute;
+                    top: calc(50% - 12px);
+                    right: 0;
+                    font-size: 24px;
+                    content: '\e915';
+                    transition: transform ease-in-out 300ms;
+                }
+            }
+            &.-active {
+                &::after {
+                    @include respond-below(md) {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}

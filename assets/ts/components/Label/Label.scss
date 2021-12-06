@@ -1,0 +1,80 @@
+/* ==========================================================================
+	Label
+	========================================================================== */
+
+@use '../../../css/base' as *;
+
+/*========================================================================== */
+
+.f-label {
+    @include typo_aeonik_14-16;
+    position: relative;
+
+    input {
+        position: absolute;
+        z-index: -10;
+        display: none;
+
+        &:checked + label {
+            background-color: $color_pearl_bush;
+
+            .f-label {
+                &_pipe {
+                    background-color: $color_parchment;
+                }
+                &_text {
+                    text-shadow: 0 0 1px $color_black;
+                }
+            }
+        }
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 171px;
+        height: 48px;
+        padding: 14px 24px;
+        line-height: 1;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+        background-color: $color_white;
+        border: 1px solid $color_grey-4;
+        border-radius: 24px;
+        transition: border-color 0.25s;
+
+        @include respond-below(sm) {
+            width: 100%;
+            padding: 14px 32px;
+        }
+
+        &:hover {
+            border-color: $color_cinder;
+
+            .f-label_text {
+                text-shadow: 0 0 1px $color_black;
+            }
+        }
+        & > * {
+            flex-shrink: 0;
+            pointer-events: none;
+        }
+    }
+    &_text {
+        transition: text-shadow 0.25s;
+
+        @include respond-below(sm) {
+            flex-grow: 1;
+        }
+    }
+    &_pipe {
+        display: inline-block;
+        width: 1px;
+        height: 20px;
+        margin-right: 16px;
+        margin-left: 16px;
+        text-indent: -999em;
+        background-color: $color_grey-4;
+    }
+}

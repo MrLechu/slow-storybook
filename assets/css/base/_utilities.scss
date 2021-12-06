@@ -1,0 +1,159 @@
+/* ==========================================================================
+	 Utilities
+	 ========================================================================== */
+
+@use 'vars' as *;
+@use 'mixins' as *;
+
+.-uppercase {
+    text-transform: uppercase;
+}
+.-italic {
+    font-style: italic;
+}
+.-underlined {
+    text-decoration: underline;
+}
+.-wLight {
+    font-weight: lighter;
+}
+.-wNormal {
+    font-weight: 400;
+}
+.-wBold {
+    font-weight: bold;
+}
+
+/*========================================================================== */
+
+.-tCenter {
+    text-align: center;
+}
+.-tCenterMd {
+    @include respond-below(md) {
+        text-align: center;
+    }
+}
+.-tLeft {
+    text-align: left;
+}
+.-tLeftSm {
+    @include respond-below(sm) {
+        text-align: left;
+    }
+}
+.-tRight {
+    text-align: right;
+}
+
+/*========================================================================== */
+
+.-cDark {
+    color: $color_cinder;
+}
+.-cWhite {
+    color: $color_white !important;
+}
+.-cBlack {
+    color: $color_black;
+}
+.-cCinder {
+    color: $color_cinder;
+}
+.-cPumpkin {
+    color: $color_pumpkin;
+}
+.-cGrey {
+    color: $color_grey-5;
+}
+.-cCinderOpacity {
+    color: rgba($color_cinder, 0.7);
+}
+.-cLimestoneGrey {
+    color: $color_limestone_grey;
+}
+.-cErrorInfo {
+    color: $color_error_info;
+}
+
+/*========================================================================== */
+
+.-bgWhite {
+    background-color: $color_white;
+}
+
+.-bgBlack {
+    background-color: $color_black;
+}
+
+.-bgGrey {
+    background-color: $color_grey;
+}
+
+.-bgPumpkin {
+    background-color: $color_pumpkin;
+}
+
+.-bgPearlBush {
+    background-color: $color_pearl_bush;
+}
+
+.-bgTransparent {
+    background-color: transparent;
+}
+
+/*========================================================================== */
+
+.-fullWidth {
+    width: 100%;
+}
+
+.-smFullWidth {
+    @include respond-below(sm) {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+}
+
+.-mdFullWidth {
+    @include respond-below(md) {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+}
+
+.-smFullImgWidth {
+    @include respond-below(xs) {
+        width: 100vw !important;
+        max-width: none;
+        margin-left: calc(50% - 50vw);
+    }
+}
+
+/*========================================================================== */
+
+$lines: 2;
+
+@each $l in $lines {
+    .-lineClamp#{$l} {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: #{$l};
+    }
+}
+
+/*========================================================================== */
+
+[class*='icon-'] {
+    &.-s16 {
+        font-size: 16px !important;
+    }
+
+    &.-s24 {
+        font-size: 24px !important;
+    }
+    &.-s28 {
+        font-size: 28px !important;
+    }
+}
